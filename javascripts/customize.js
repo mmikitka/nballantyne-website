@@ -1,18 +1,15 @@
-(function($, window, document) {
-var allPanels = $('.accordion > dd');
-allPanels.hide();
+$('.accordion > dd').hide();
 
-$('.accordion > dt > a').click(function() {
-  var definition = $(this).parent().next();
+$('.accordion > dt > span > a').click(function() {
+  var definition = $(this).parent().parent().next();
   var display = definition.css("display");
-
   if (display == "none") {
     definition.show();
+    $(this).text("[-]");
   } else {
     definition.hide();
+    $(this).text("[+]");
   }
 
   return false;
 });
-
-}(Foundation.zj, window, document));
