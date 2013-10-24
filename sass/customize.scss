@@ -4,50 +4,79 @@
 @import "foundation/components/global";
 @import "foundation/components/grid";
 @import "foundation/components/type";
-
-.header-banner {
-  margin-top: 2em;
-
-  .banner-square {
-    background-repeat: no-repeat;
-    border: 3px solid #FFF;
-    width: 175px;
-    height: 140px;
-  }
-  .banner-square-1 {
-    background-position: 0px 0px;
-  }
-  .banner-square-2 {
-    background-position: -170px 0px;
-  }
-  .banner-square-3 {
-    background-position: 0px -140px;
-  }
-  .banner-square-4 {
-    background-position: -170px -140px;
-  }
-}
+@import "foundation/components/side-nav";
+@import "foundation/components/inline-lists";
 
 .main {
   margin-top: 1em;
-
   h1 {
     color: lighten($header-font-color, 30%);
     text-transform: uppercase;
   }
+}
 
-  .side-nav {
-    margin-left: 4em;
-    text-transform: uppercase;
-    a {
-      color: $body-font-color;
-      &:hover {
-        text-decoration: underline;
+.footer {
+  .footer-links {
+    @include inline-list();
+  }
+}
+
+@media only screen and (max-width: $small-screen - 1) {
+  .main {
+    .navigation {
+      @include inline-list();
+      text-transform: uppercase;
+      a {
+        color: $body-font-color;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
 }
 
-.footer {
-  .inline-list { margin-left: 7em; }
+@media #{$small} {
+  .header-banner {
+    margin-top: 2em;
+
+    .banner-square {
+      background-repeat: no-repeat;
+      border: 3px solid #FFF;
+      width: 175px;
+      height: 140px;
+    }
+    .banner-square-1 {
+      background-position: 0px 0px;
+    }
+    .banner-square-2 {
+      background-position: -170px 0px;
+    }
+    .banner-square-3 {
+      background-position: 0px -140px;
+    }
+    .banner-square-4 {
+      background-position: -170px -140px;
+    }
+  }
+
+  .main {
+    .navigation {
+      @include side-nav();
+      margin-left: 4em;
+      text-transform: uppercase;
+      a {
+        color: $body-font-color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .navigation-divider { display: none; }
+  }
+
+  .footer .footer-links {
+    margin-left: 7em;
+  }
 }
