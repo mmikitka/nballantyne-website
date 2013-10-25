@@ -23,6 +23,10 @@
 
 @media only screen and (max-width: $small-screen - 1) {
   .main {
+    h1 {
+      margin-bottom: 1em;
+    }
+
     .navigation {
       @include inline-list();
       text-transform: uppercase;
