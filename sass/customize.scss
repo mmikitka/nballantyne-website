@@ -63,7 +63,10 @@
   .main {
     .navigation {
       @include side-nav();
+
+      margin-top: 3em;
       margin-left: 4em;
+
       text-transform: uppercase;
       a {
         color: $body-font-color;
