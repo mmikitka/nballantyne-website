@@ -13,6 +13,10 @@
     color: lighten($header-font-color, 30%);
     text-transform: uppercase;
   }
+
+  .navigation {
+    font-family: $header-font-family;
+  }
 }
 
 .footer {
@@ -24,7 +28,9 @@
 @media only screen and (max-width: $small-screen - 1) {
   .main {
     h1 {
+      margin-top: 0.5em;
       margin-bottom: 1em;
+      font-size: em-calc(23);
     }
 
     .navigation {
