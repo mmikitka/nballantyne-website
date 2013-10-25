@@ -47,6 +47,13 @@
 }
 
 @media #{$small} {
+  .no-js {
+    // If JavaScript is disabled, use the same banner image for every page
+    .header-banner .banner-square {
+      background-image: url(../images/banner_340_280/mtlemmon_ice.jpg);
+    }
+  }
+
   .header-banner {
     margin-top: 2em;
 
