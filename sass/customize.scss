@@ -7,6 +7,14 @@
 @import "foundation/components/side-nav";
 @import "foundation/components/inline-lists";
 
+
+// Testing sans serif body font
+.home2 {
+  p {
+    font-family: $header-font-family;
+  }
+}
+
 .main {
   margin-top: 1em;
   h1 {
