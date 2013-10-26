@@ -47,6 +47,12 @@
 }
 
 @media #{$small} {
+  html {
+    // Always display the vertical scrollbar to avoid left-right shifting
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+  }
+
   .no-js {
     // If JavaScript is disabled, use the same banner image for every page
     .header-banner .banner-square {
