@@ -17,10 +17,11 @@
 
 .main {
   margin-top: 1em;
-  h1 {
+
+  h1, h2, h3 {
     color: lighten($header-font-color, 30%);
-    text-transform: uppercase;
   }
+  h1 { text-transform: uppercase; }
 
   .navigation {
     font-family: $header-font-family;
