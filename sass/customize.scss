@@ -23,6 +23,17 @@
   }
   h1 { text-transform: uppercase; }
 
+  .cv-list {
+    list-style: none;
+    & > li {
+      margin-bottom: 1em;
+    }
+
+    .cv-sublist {
+      margin-left: 2em;
+    }
+  }
+
   .navigation {
     font-family: $header-font-family;
   }
