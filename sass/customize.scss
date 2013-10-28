@@ -25,6 +25,22 @@
   .navigation {
     font-family: $header-font-family;
   }
+
+  .accordion {
+    dt {
+      margin-top: 1em;
+      em, span, a {
+        font-weight: normal;
+      }
+    }
+
+    dd {
+      margin-left: 1em;
+      p {
+        margin-bottom: 0.5em;
+      }
+    }
+  }
 }
 
 .footer {
