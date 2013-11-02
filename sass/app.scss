@@ -20,7 +20,7 @@
 // @import "foundation/components/grid-5";
 //
 
-@import "foundation/components/visibility";
+// @import "foundation/components/visibility";
 // @import "foundation/components/block-grid";
 @import "foundation/components/type";
 // @import "foundation/components/buttons";
@@ -40,12 +40,12 @@
 // @import "foundation/components/breadcrumbs";
 // @import "foundation/components/keystrokes";
 // @import "foundation/components/labels";
-// @import "foundation/components/inline-lists";
+@import "foundation/components/inline-lists";
 // @import "foundation/components/pagination";
 // @import "foundation/components/panels";
 // @import "foundation/components/pricing-tables";
 // @import "foundation/components/progress-bars";
-// @import "foundation/components/side-nav";
+@import "foundation/components/side-nav";
 // @import "foundation/components/sub-nav";
 // @import "foundation/components/switch";
 // @import "foundation/components/magellan";
@@ -53,3 +53,135 @@
 // @import "foundation/components/thumbs";
 // @import "foundation/components/tooltips";
 // @import "foundation/components/dropdown";
+
+//
+// Customizations
+//
+
+.main {
+  margin-top: 1em;
+
+  h1, h2, h3 {
+    color: lighten($header-font-color, 30%);
+  }
+  h1 { text-transform: uppercase; }
+
+  .cv-list {
+    list-style: none;
+    & > li {
+      margin-bottom: 1em;
+    }
+
+    .cv-sublist {
+      margin-left: 2em;
+    }
+  }
+
+  .navigation {
+    font-family: $header-font-family;
+  }
+
+  .accordion {
+    dt {
+      margin-top: 1em;
+      em, span, a {
+        font-weight: normal;
+      }
+    }
+
+    dd {
+      margin-left: 1em;
+      p {
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}
+
+.footer {
+  .footer-links {
+    @include inline-list();
+  }
+}
+
+@media only screen and (max-width: $small-screen - 1) {
+  .main {
+    h1 {
+      margin-top: 0.5em;
+      margin-bottom: 1em;
+      font-size: em-calc(23);
+    }
+
+    .navigation {
+      @include inline-list();
+      text-transform: uppercase;
+      a {
+        color: $body-font-color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media #{$small} {
+  html {
+    // Always display the vertical scrollbar to avoid left-right shifting
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+  }
+
+  .no-js {
+    // If JavaScript is disabled, use the same banner image for every page
+    .header-banner .banner-square {
+      background-image: url(../images/banner_340_280/mtlemmon_ice.jpg);
+    }
+  }
+
+  .header-banner {
+    margin-top: 2em;
+
+    .banner-square {
+      background-repeat: no-repeat;
+      border: 3px solid #FFF;
+      width: 175px;
+      height: 140px;
+    }
+    .banner-square-1 {
+      background-position: 0px 0px;
+    }
+    .banner-square-2 {
+      background-position: -170px 0px;
+    }
+    .banner-square-3 {
+      background-position: 0px -140px;
+    }
+    .banner-square-4 {
+      background-position: -170px -140px;
+    }
+  }
+
+  .main {
+    .navigation {
+      @include side-nav();
+
+      margin-top: 3em;
+      margin-left: 4em;
+
+      text-transform: uppercase;
+      a {
+        color: $body-font-color;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .navigation-divider { display: none; }
+  }
+
+  .footer .footer-links {
+    margin-left: 7em;
+  }
+}
