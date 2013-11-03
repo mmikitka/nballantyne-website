@@ -76,6 +76,9 @@
   ];
 
   var arrayIndex = getRandomInt(0, bannerImages.length - 1);
-  var imagePath = "url(images/banner_340_280/" + bannerImages[arrayIndex] + ")";
-  $('.banner-square').css("background-image", imagePath);
+  var imagePath = "images/banner_340_280/" + bannerImages[arrayIndex];
+  $('.banner-square').css("background-image", "url(" + imagePath + ")");
+
+  var bannerAnchors = $('.banner-square-image-url');
+  bannerAnchors.attr("href", imagePath);
 }(jQuery, this, this.document));
