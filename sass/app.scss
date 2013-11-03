@@ -83,10 +83,8 @@
 
   .accordion {
     dt {
-      margin-top: 1em;
-      em, span, a {
-        font-weight: normal;
-      }
+      margin-top: 1.25em;
+      font-weight: normal;
     }
 
     dd {
@@ -96,6 +94,9 @@
       }
     }
   }
+
+  .item-title { font-weight: bold }
+  .item-journal { font-style: italic; }
 }
 
 .footer {
