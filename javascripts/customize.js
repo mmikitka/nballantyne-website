@@ -35,7 +35,6 @@
     "canoe_paddle.jpg",
     "cd07_blue.jpg",
     "closeup_grass.jpg",
-    "duquesne_ghosthouse2.jpg",
     "duquesne_ghosthouse_wall.jpg",
     "duquesne_oldadobe.jpg",
     "flowerpot.jpg",
